@@ -30,7 +30,7 @@ export default function App() {
 
           // 🔴 IMPORTANT: yahan n8n webhook daalna hai
           const webhook =
-            "https://my1stagent.app.n8n.cloud/webhook/sos-alert";
+            "https://sidraakhter.app.n8n.cloud/webhook/sos-alert";
 
           const res = await fetch(webhook, {
             method: "POST",
