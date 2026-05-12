@@ -28,11 +28,8 @@ export default function App() {
         try {
           setStatus("🚨 Sending SOS...");
 
-          // 🔴 IMPORTANT: yahan n8n webhook daalna hai
-          const webhook =
-            "https://sidraakhter.app.n8n.cloud/webhook/sos-alert";
 
-          const res = await fetch(webhook, {
+          const res = await fetch("/api/sos", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -51,7 +48,7 @@ export default function App() {
       },
       () => {
         setStatus("❌ Location permission denied");
-      }
+      },
     );
   }
 
